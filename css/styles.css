@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    background-color: #fdd3dd;
+}
+
+h1 {
+    font-size: 42px;
+    font-weight: 800;
+    padding: 10px;
+    color: purple;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 300;
+    margin: 1em;
+    color: purple;
+}
+
+nav {
+    color: purple;
+}
+/*Use a descendant selector to style only <p> inside <footer> (smaller font, grey color).*/
+footer p {
+    font-size: 12px;
+    color: grey;
+}
+/*Use a child selector (>) so that only lists directly inside <main> get a border or background.*/
+main > section > ul > li {
+    border: 1px solid black;
+}
+/*Use a next-sibling selector (+) so that the first <p> immediately after any <h1> becomes an intro
+ (italic, slightly bigger font).*/
+ h2 + p { /*Denne funker ikke da det ikke er noen p i samme parent, kan evt. gjøre h2 targeten*/
+     font-style: italic;
+     font-size: 18px;
+ }
+
+ /*Bonus: Demonstrate a hover on a parent element that changes something in a child element
+ (e.g. div:hover p { color: red;}).*/
+.menu-section ul > li:hover {
+    color: yellow;
+ }
+
+ #feature {
+    background-color: white;
+    padding: 1em;
+    box-shadow: 5px 5px 10px purple;
+    margin: 20px 0
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.note  {
+    font-style: italic;
+    font-size: 14px;
+}
+
+.menu li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.smallcaps li {
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+nav ul li:hover  {
+    background-color: blue;
+    cursor: pointer;
+}
+
+nav ul li:visited {
+    color: red;
+}
+
+.menu-section ul li:nth-child(odd) {
+    background-color: white;
+}
+
+.menu-section ul li:nth-child(even) {
+    background-color: grey;
+}
+
+.menu-section ul li:first-child {
+    text-transform: capitalize;
+}
+
+.menu-section ul li:last-child {
+    text-transform: uppercase;
+}
+
+form {
+    background-color: white;
+    border: 1px solid purple;
+    padding: 10px;
+    margin: 20px 0;
+
+    h3 {
+        color: purple;
+    }
+    label {
+        background-color: pink;
+        padding: 5px;
+    }
+}
+
+input[type=text] {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid pink;
+}
+
+input[type=text]:focus {
+    border: 3px solid yellow;
+}
+
+P {
+    color: blue;
+}
+
+.highlight p {
+    color: green;
+}
+
+#feature p {
+    color: red;
+}
+
+/*Inline styles override other CSS rules due to their high specificity in the CSS cascade.
+The browser prioritizes styles based on a set of rules,
+and inline styles are considered the "closest" to the HTML element they are applied to.
+
+1. Inline styles
+2. Internal(Inside style tags in <head>) or external stylesheets(.css file)*/
