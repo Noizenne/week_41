@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: sans-serif;
+    font-family: "quicksand", sans-serif;
     line-height: 1.5;
-    background-color: #fdd3dd;
+    background-image:url("https://images.unsplash.com/photo-1588097257570-59b6f7360bfb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    width: 70%;
+    margin: auto;
 }
 
 h1 {
@@ -25,6 +28,7 @@ h2 {
 
 nav {
     color: purple;
+
 }
 /*Use a descendant selector to style only <p> inside <footer> (smaller font, grey color).*/
 footer p {
@@ -34,6 +38,8 @@ footer p {
 /*Use a child selector (>) so that only lists directly inside <main> get a border or background.*/
 main > section > ul > li {
     border: 1px solid black;
+    list-style: none;
+    text-align: center;
 }
 /*Use a next-sibling selector (+) so that the first <p> immediately after any <h1> becomes an intro
  (italic, slightly bigger font).*/
@@ -45,7 +51,8 @@ main > section > ul > li {
  /*Bonus: Demonstrate a hover on a parent element that changes something in a child element
  (e.g. div:hover p { color: red;}).*/
 .menu-section ul > li:hover {
-    color: yellow;
+    color: orange;
+    font-size: 18px;
  }
 
  #feature {
@@ -76,8 +83,11 @@ main > section > ul > li {
 }
 
 nav ul li:hover  {
-    background-color: blue;
+    background-color: orange;
+    padding: 5px;
     cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
 }
 
 nav ul li:visited {
@@ -144,3 +154,11 @@ and inline styles are considered the "closest" to the HTML element they are appl
 
 1. Inline styles
 2. Internal(Inside style tags in <head>) or external stylesheets(.css file)*/
+
+@media(max-width: 768px) {
+
+    body {
+        width: 100%;
+        margin: 0;
+    }
+}
