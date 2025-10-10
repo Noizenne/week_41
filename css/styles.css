@@ -28,7 +28,6 @@ h2 {
 
 nav {
     color: purple;
-
 }
 /*Use a descendant selector to style only <p> inside <footer> (smaller font, grey color).*/
 footer p {
@@ -109,7 +108,9 @@ nav ul li:visited {
 .menu-section ul li:last-child {
     text-transform: uppercase;
 }
-
+.menu-section ul li:not(.special) {
+    color: blue;
+}
 form {
     background-color: white;
     border: 1px solid purple;
